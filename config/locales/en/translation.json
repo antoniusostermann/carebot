@@ -37,11 +37,15 @@
     ]
   },
   "promptState": {
-    "invokeGenericIntent": [
-      "Wer war denn heute gemein zu dir?",
-      "Wen meinst du?",
-      "Wer hat dich geärgert?"
-    ],
-    "helpGenericIntent": "Nenne mir einfach den Vornamen der Person, die dich geärgert hat."
+    "invokeGenericIntent": {
+      "colleague": [
+        "Wer war denn heute gemein zu dir?",
+        "Wen meinst du?",
+        "Wer hat dich geärgert?"
+      ]
+    },
+    "helpGenericIntent": {
+      "colleague": "Nenne mir einfach den Vornamen der Person, die dich geärgert hat."
+    }
   }
 }

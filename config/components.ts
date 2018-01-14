@@ -49,5 +49,6 @@ const alexaConfiguration: AlexaConfiguration = {
 export default {
   "core:i18n": i18nConfiguration,
   "core:services": servicesConfiguration,
+  "core:unifier": unifierConfiguration,
   "alexa": alexaConfiguration
 }
