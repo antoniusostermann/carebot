@@ -1,5 +1,6 @@
 import * as fakeRedis from "fakeredis";
 import { i18nInterfaces, unifierInterfaces, servicesInterfaces } from "assistant-source";
+import { Configuration as AlexaConfiguration } from "assistant-alexa";
 
 const i18nConfiguration: i18nInterfaces.Configuration = {
   // This is basically the i18next configuration. Check out https://www.i18next.com/ for more information!
@@ -23,11 +24,18 @@ const servicesConfiguration: servicesInterfaces.Configuration = {
   redisClient: fakeRedis.createClient()
 }
 
+/** Configures Alexa component */
+const alexaConfiguration: AlexaConfiguration = {
+  applicationID: "amzn1.ask.skill.fad96e04-45aa-4e8e-afa2-d2b6116327fe",
+  useVerifier: false
+}
+
 /*
  * Each configuration must be mapped to it's corresponding component name.
  * The registration is done in index.ts.
  */
 export default {
   "core:i18n": i18nConfiguration,
-  "core:services": servicesConfiguration
+  "core:services": servicesConfiguration,
+  "alexa": alexaConfiguration
 }

@@ -1,4 +1,5 @@
 import { AssistantJSSetup, StateMachineSetup } from "assistant-source";
+import { descriptor as alexaDescriptor } from "assistant-alexa";
 import components from "./config/components";
 
 /** 
@@ -16,7 +17,8 @@ export const stateMachineSetup = new StateMachineSetup(assistantJs);
  * @param addOnly If set to true, states will only be added, but not registered in the dependency injection container
  */
 export function initializeSetups (assistantJs: AssistantJSSetup, stateMachineSetup: StateMachineSetup, addOnly = false) {
-  // Register all AssistantJS components - currently none
+  // Register all AssistantJS components
+  assistantJs.registerComponent(alexaDescriptor);
 
   // Configure components
   assistantJs.addConfiguration(components);
