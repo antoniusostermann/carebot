@@ -1,4 +1,12 @@
 {
+  "root": {
+    "cancelGenericIntent": [
+      "Bis bald!",
+      "Hab noch einen schönen Feierabend!",
+      "Viel Spaß heute noch!"
+    ],
+    "helpGenericIntent": "Im Moment kann ich dir leider nicht helfen, tut mir leid."
+  },
   "mainState": {
     "invokeGenericIntent": [
       "Hallo Toni! Wie war dein Tag?",
@@ -12,6 +20,7 @@
     ],
     "badDayIntent": [
       "{Ein weiser Mann|Barney Stinson} sagte mal: 'if I'm <phoneme alphabet='ipa' ph='sæd'>sad</phoneme>, <phoneme alphabet='ipa' ph='aɪ'>I</phoneme> <phoneme alphabet='ipa' ph='stɑp'>stop</phoneme> being <phoneme alphabet='ipa' ph='sæd'>sad</phoneme> and be awesome instead'"
-    ]
+    ],
+    "helpGenericIntent": "Oh man. Wenn das mal kein DAU-Alarm ist... Aber gut. Sage 'schlecht' wenn es dir schlecht geht, und 'gut' wenn es dir gut geht."
   }
 }
