@@ -1,5 +1,6 @@
 import { AssistantJSSetup, StateMachineSetup } from "assistant-source";
 import { descriptor as alexaDescriptor } from "assistant-alexa";
+import { descriptor as validationsDescriptor, PromptState } from "assistant-validations";
 import components from "./config/components";
 
 /** 
@@ -19,11 +20,13 @@ export const stateMachineSetup = new StateMachineSetup(assistantJs);
 export function initializeSetups (assistantJs: AssistantJSSetup, stateMachineSetup: StateMachineSetup, addOnly = false) {
   // Register all AssistantJS components
   assistantJs.registerComponent(alexaDescriptor);
+  assistantJs.registerComponent(validationsDescriptor);
 
   // Configure components
   assistantJs.addConfiguration(components);
 
   // Register all states and strategies
+  stateMachineSetup.addState(PromptState);
   stateMachineSetup.registerByConvention(addOnly);
 }
 

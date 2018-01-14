@@ -19,6 +19,9 @@
   "unfriendlyColleaguesIntent": [
     "{Meine Kollegen|Die anderen} waren {doof|gemein} zu mir",
     "Es liegt an meinen Kollegen",
-    "Ich würde geärgert"
+    "Ich würde geärgert",
+    "{{colleague}} hat mich geärgert",
+    "{{colleague}} war {gemein|unfair} zu mir",
+    "{{colleague}} mal wieder"
   ]
 }

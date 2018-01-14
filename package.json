@@ -1,6 +1,6 @@
 {
   "name": "carebot",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Example AssistantJS bot in German",
   "main": "js/index.js",
   "repository": "https://github.com/antoniusostermann/carebot",
@@ -10,6 +10,7 @@
   "dependencies": {
     "assistant-alexa": "^0.2.0",
     "assistant-source": "^0.2.6",
+    "assistant-validations": "^0.2.0",
     "fakeredis": "^2.0.0"
   },
   "devDependencies": {
