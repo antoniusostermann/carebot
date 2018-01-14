@@ -1,6 +1,9 @@
 import { AssistantJSSetup, StateMachineSetup } from "assistant-source";
 import { descriptor as alexaDescriptor } from "assistant-alexa";
+import { descriptor as dialogflowDescriptor } from "assistant-apiai";
+import { descriptor as googleDescriptor } from "assistant-google";
 import { descriptor as validationsDescriptor, PromptState } from "assistant-validations";
+import { descriptor as genericUtterancesDescriptor } from "assistant-generic-utterances";
 import components from "./config/components";
 
 /** 
@@ -20,7 +23,10 @@ export const stateMachineSetup = new StateMachineSetup(assistantJs);
 export function initializeSetups (assistantJs: AssistantJSSetup, stateMachineSetup: StateMachineSetup, addOnly = false) {
   // Register all AssistantJS components
   assistantJs.registerComponent(alexaDescriptor);
+  assistantJs.registerComponent(dialogflowDescriptor);
+  assistantJs.registerComponent(googleDescriptor);
   assistantJs.registerComponent(validationsDescriptor);
+  assistantJs.registerComponent(genericUtterancesDescriptor);
 
   // Configure components
   assistantJs.addConfiguration(components);

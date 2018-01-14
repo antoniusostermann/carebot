@@ -1,6 +1,7 @@
 import * as fakeRedis from "fakeredis";
 import { i18nInterfaces, unifierInterfaces, servicesInterfaces } from "assistant-source";
 import { Configuration as AlexaConfiguration } from "assistant-alexa";
+import { Configuration as DialogflowConfiguration } from "assistant-apiai";
 
 const i18nConfiguration: i18nInterfaces.Configuration = {
   // This is basically the i18next configuration. Check out https://www.i18next.com/ for more information!
@@ -42,6 +43,16 @@ const alexaConfiguration: AlexaConfiguration = {
   useVerifier: false
 }
 
+/** Configures Dialogflow/Apiai component */
+const dialogflowConfiguration: DialogflowConfiguration = {
+  authenticationHeaders: {
+    "mysecretheaderfield": "mySecretHeaderValue"
+  },
+  entities: {
+    "firstName": "@sys.given-name"
+  }
+};
+
 /*
  * Each configuration must be mapped to it's corresponding component name.
  * The registration is done in index.ts.
@@ -50,5 +61,6 @@ export default {
   "core:i18n": i18nConfiguration,
   "core:services": servicesConfiguration,
   "core:unifier": unifierConfiguration,
-  "alexa": alexaConfiguration
+  "alexa": alexaConfiguration,
+  "apiai": dialogflowConfiguration
 }
