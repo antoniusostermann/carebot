@@ -1,6 +1,6 @@
 {
   "name": "carebot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Example AssistantJS bot in German",
   "main": "js/index.js",
   "repository": "https://github.com/antoniusostermann/carebot",
@@ -8,7 +8,8 @@
     "test": "jasmine-ts spec/**/*.spec.ts"
   },
   "dependencies": {
-    "assistant-source": "^0.2.0",
+    "assistant-alexa": "^0.2.0",
+    "assistant-source": "^0.2.6",
     "fakeredis": "^2.0.0"
   },
   "devDependencies": {
