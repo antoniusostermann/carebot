@@ -12,7 +12,8 @@ import { ApplicationState } from "./application";
 export class ReasonState extends ApplicationState {
   constructor(
     @inject(injectionNames.current.responseFactory) responseFactory: unifierInterfaces.ResponseFactory,
-    @inject(injectionNames.current.translateHelper) translateHelper: i18nInterfaces.TranslateHelper
+    @inject(injectionNames.current.translateHelper) translateHelper: i18nInterfaces.TranslateHelper,
+    @inject(injectionNames.current.entityDictionary) private entities: unifierInterfaces.EntityDictionary
   ) {
     super(responseFactory, translateHelper);
   }
@@ -27,7 +28,7 @@ export class ReasonState extends ApplicationState {
   /** "My collegues have been mean! " */
   @needs("colleague")
   unfriendlyColleaguesIntent(machine: stateMachineInterfaces.Transitionable) {
-    this.responseFactory.createVoiceResponse().endSessionWith(this.translateHelper.t())
+    this.responseFactory.createVoiceResponse().endSessionWith(this.translateHelper.t({ meanFriend: this.entities.get("colleague") as string }))
   }
 
   /** In parental BaseState, unhandledGenericIntent uses prompt(). Let's switch this to endSession(). */
