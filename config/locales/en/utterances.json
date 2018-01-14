@@ -1,1 +1,19 @@
-{}
+{
+  "goodDayIntent": [
+    "Heute war ein guter Tag",
+    "Ich hatte heute einen guten Tag",
+    "Heute hat die Arbeit Spaß gemacht",
+    "Ich fühle mich wunderbar",
+    "Sehr gut",
+    "Schön",
+    "Super"
+  ],
+  "badDayIntent": [
+    "Frag nicht",
+    "Schlecht",
+    "Doof",
+    "Langweilig",
+    "Heute war es wirklich {schlimm|grausam|ätzend}",
+    "Was soll diese saublöde Frage, du empathielose {Möchtegern|Pseudo}-Intelligenz"
+  ]
+}
