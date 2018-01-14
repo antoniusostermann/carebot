@@ -1,4 +1,5 @@
 import { stateMachineInterfaces, injectionNames, unifierInterfaces, i18nInterfaces } from "assistant-source";
+import { needs } from "assistant-validations";
 import { injectable, inject } from "inversify";
 
 import { ApplicationState } from "./application";
@@ -24,6 +25,7 @@ export class ReasonState extends ApplicationState {
   }
 
   /** "My collegues have been mean! " */
+  @needs("colleague")
   unfriendlyColleaguesIntent(machine: stateMachineInterfaces.Transitionable) {
     this.responseFactory.createVoiceResponse().endSessionWith(this.translateHelper.t())
   }

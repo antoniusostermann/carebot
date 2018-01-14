@@ -35,5 +35,13 @@
     "unhandledGenericIntent": [
       "{Ein weiser Mann|Barney Stinson} sagte mal: 'if I'm <phoneme alphabet='ipa' ph='sæd'>sad</phoneme>, <phoneme alphabet='ipa' ph='aɪ'>I</phoneme> <phoneme alphabet='ipa' ph='stɑp'>stop</phoneme> being <phoneme alphabet='ipa' ph='sæd'>sad</phoneme> and be awesome instead'"
     ]
+  },
+  "promptState": {
+    "invokeGenericIntent": [
+      "Wer war denn heute gemein zu dir?",
+      "Wen meinst du?",
+      "Wer hat dich geärgert?"
+    ],
+    "helpGenericIntent": "Nenne mir einfach den Vornamen der Person, die dich geärgert hat."
   }
 }
