@@ -9,11 +9,10 @@
     "unhandledGenericIntent": "Ich habe dich leider nicht verstanden, tut mir leid. Magst du das nochmal wiederholen?"
   },
   "mainState": {
-    "invokeGenericIntent": [
-      "Hallo Toni! Wie war dein Tag?",
-      "Hey! Wie geht es dir {heute|}?",
-      "Schön, dass du {wieder|} zuhause bist, Toni! Wie war die Arbeit?"
-    ],
+    "invokeGenericIntent": {
+      "alexa": "Toni hat Feierabend, und Alexa ist {selbstverständlich|natürlich|gerne} für ihn da. Wie war dein Tag?",
+      "google": "Alexa zickt rum? {Kein Problem.|} Der Google Assistant übernimmt das. Wie war dein Tag?"
+    },
     "goodDayIntent": [
       "Das freut mich {sehr|wirklich sehr|} {für dich|}!",
       "Schön! Ich habe hier {ordnungsgemäß|erfolgreich|} die Stellung gehalten!",
