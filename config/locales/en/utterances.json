@@ -14,6 +14,11 @@
     "Doof",
     "Langweilig",
     "Heute war es wirklich {schlimm|grausam|ätzend}",
-    "Was soll diese saublöde Frage, du empathielose {Möchtegern|Pseudo}-Intelligenz"
+    "Was soll diese saublöde Frage du empathielose {Möchtegern|Pseudo}-Intelligenz"
+  ],
+  "unfriendlyColleaguesIntent": [
+    "{Meine Kollegen|Die anderen} waren {doof|gemein} zu mir",
+    "Es liegt an meinen Kollegen",
+    "Ich würde geärgert"
   ]
 }

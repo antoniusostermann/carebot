@@ -33,6 +33,6 @@ export class MainState extends ApplicationState {
 
   /** "I've had a bad day!" */
   badDayIntent(machine: stateMachineInterfaces.Transitionable) {
-    this.responseFactory.createVoiceResponse().endSessionWith(this.translateHelper.t());
+    return machine.redirectTo("ReasonState", "invokeGenericIntent");
   }
 }
