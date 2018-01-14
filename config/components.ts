@@ -17,6 +17,15 @@ const i18nConfiguration: i18nInterfaces.Configuration = {
 }
 
 /**
+ * Configuration for AssistantJS's unifier module. Also contains main entity configuration.
+ */
+const unifierConfiguration: unifierInterfaces.Configuration = {
+  entities: {
+    "firstName": ["colleague"]
+  }
+};
+
+/**
  * Configures the redis instance to use. 
  * Currently uses fakeredis, you want to change this to a real redis endpoint for production usage!
  */
@@ -27,6 +36,9 @@ const servicesConfiguration: servicesInterfaces.Configuration = {
 /** Configures Alexa component */
 const alexaConfiguration: AlexaConfiguration = {
   applicationID: "amzn1.ask.skill.fad96e04-45aa-4e8e-afa2-d2b6116327fe",
+  parameters: {
+    "firstName": "AMAZON.DE_FIRST_NAME"
+  },
   useVerifier: false
 }
 
@@ -37,5 +49,6 @@ const alexaConfiguration: AlexaConfiguration = {
 export default {
   "core:i18n": i18nConfiguration,
   "core:services": servicesConfiguration,
+  "core:unifier": unifierConfiguration,
   "alexa": alexaConfiguration
 }
