@@ -1,1 +1,17 @@
-{}
+{
+  "mainState": {
+    "invokeGenericIntent": [
+      "Hallo Toni! Wie war dein Tag?",
+      "Hey! Wie geht es dir {heute|}?",
+      "Schön, dass du {wieder|} zuhause bist, Toni! Wie war die Arbeit?"
+    ],
+    "goodDayIntent": [
+      "Das freut mich {sehr|wirklich sehr|} {für dich|}!",
+      "Schön! Ich habe hier {ordnungsgemäß|erfolgreich|} die Stellung gehalten!",
+      "Super! Bei mir war es übrigens auch ganz gut, sollte dich das mal interessieren."
+    ],
+    "badDayIntent": [
+      "{Ein weiser Mann|Barney Stinson} sagte mal: 'if I'm <phoneme alphabet='ipa' ph='sæd'>sad</phoneme>, <phoneme alphabet='ipa' ph='aɪ'>I</phoneme> <phoneme alphabet='ipa' ph='stɑp'>stop</phoneme> being <phoneme alphabet='ipa' ph='sæd'>sad</phoneme> and be awesome instead'"
+    ]
+  }
+}
