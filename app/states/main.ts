@@ -23,16 +23,16 @@ export class MainState extends ApplicationState {
    * It is called as soon as the application is launched, e. g. if user says "launch xxxxx".
    */
   invokeGenericIntent(machine: stateMachineInterfaces.Transitionable) {
-    this.responseFactory.createVoiceResponse().prompt("Hallo Toni! Wie war dein Tag?");
+    this.responseFactory.createVoiceResponse().prompt(this.translateHelper.t());
   }
 
   /** "I've had a good day!" */
   goodDayIntent(machine: stateMachineInterfaces.Transitionable) {
-    this.responseFactory.createVoiceResponse().endSessionWith("Das freut mich für dich!");
+    this.responseFactory.createVoiceResponse().endSessionWith(this.translateHelper.t());
   }
 
   /** "I've had a bad day!" */
   badDayIntent(machine: stateMachineInterfaces.Transitionable) {
-    this.responseFactory.createVoiceResponse().endSessionWith("Oooh, wie schade!");
+    this.responseFactory.createVoiceResponse().endSessionWith(this.translateHelper.t());
   }
 }
